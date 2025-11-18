@@ -110,7 +110,7 @@ export function WishesSection() {
             </p>
             <button
               onClick={() => setOpen(true)}
-              className="relative mt-4 inline-flex h-[150px] w-[150px] flex-col items-center justify-center gap-2 rounded-2xl border-2 border-white/70 bg-white/10 px-4 backdrop-blur transition hover:scale-105"
+              className="relative animate-shake  mt-4 inline-flex h-[150px] w-[150px] flex-col items-center justify-center gap-2 rounded-2xl border-2 border-white/70 bg-white/10 px-4 backdrop-blur transition hover:scale-105"
             >
               <span className="absolute inset-0 rounded-2xl bg-white/5 animate-pulse" />
               <Image
@@ -118,11 +118,9 @@ export function WishesSection() {
                 alt="Gift box"
                 width={100}
                 height={100}
-                className="relative z-10 h-20 w-20 animate-bounce"
+                className="relative z-10 h-25 w-25 "
               />
-              <span className="relative z-10 text-xs font-semibold uppercase tracking-[0.3em] text-white/80">
-                {wishes.buttonLabel}
-              </span>
+            
             </button>
           </ScrollReveal>
         </div>

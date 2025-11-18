@@ -17,7 +17,7 @@ export function GallerySection() {
   return (
     <section id="gallery" className="bg-[#fdf9f7]">
       <div className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center md:gap-8">
+        <div className="mx-auto flex flex-col items-center gap-6 text-center md:gap-8">
           <ScrollReveal>
             <div className="flex flex-col items-center">
               <Image
@@ -27,7 +27,7 @@ export function GallerySection() {
                 height={100}
                 className="w-40 h-20 md:w-48 md:h-24 lg:w-[200px] lg:h-[100px]"
               />
-              <h2 className={`${cormorant.className} text-4xl md:text-5xl mt-2 text-[#1f2937]`}>
+              <h2 className={`${cormorant.className} text-4xl md:text-6xl mt-2 `}>
                 Ảnh Cưới
               </h2>
             </div>

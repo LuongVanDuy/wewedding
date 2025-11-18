@@ -60,7 +60,7 @@ export function LoveStorySection() {
               <article className="flex flex-col gap-5 rounded-[24px] border border-white/10 bg-white/5 p-6 shadow-lg">
                 <div className="flex flex-col items-center gap-4 text-center">
                   <p
-                    className={`text-white text-3xl italic tracking-[0.2em] ${italicSerif.className}`}
+                    className={`text-white text-3xl italic `}
                   >
                     Love Story
                   </p>
@@ -73,7 +73,7 @@ export function LoveStorySection() {
                     className="h-auto w-32"
                   />
                   <h3 className="text-2xl text-white">{item.title}</h3>
-                  <p className="text-sm leading-relaxed text-[#bebebe]">{item.description}</p>
+                  <p className="text-sm  text-[#bebebe]">{item.description}</p>
                 </div>
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[24px]">
                   <Image
@@ -114,9 +114,9 @@ export function LoveStorySection() {
               key={item.title}
               className="w-screen h-screen px-6 md:px-12 flex flex-col xl:flex-row items-center gap-8 md:gap-12"
             >
-              <div className="flex flex-1 flex-col items-center justify-center text-center gap-5">
+              <div className="flex flex-1 flex-col items-center justify-center text-center gap-5 px-20">
                 <p
-                  className={`text-white text-2xl md:text-5xl italic tracking-[0.2em] ${italicSerif.className}`}
+                  className={`text-white text-2xl md:text-5xl italic `}
                 >
                   Love Story
                 </p>
@@ -128,20 +128,20 @@ export function LoveStorySection() {
                   height={80}
                   className="w-32 md:w-48 h-auto"
                 />
-                <h3 className="text-2xl md:text-4xl text-white uppercase tracking-widest">
+                <h3 className="text-2xl md:text-4xl text-white  tracking-[0.05em]">
                   {item.title}
                 </h3>
-                <p className="text-[#bebebe] text-base leading-relaxed md:text-lg min-h-[120px]">
+                <p className="text-[#bebebe] text-base  md:text-lg min-h-[120px]">
                   {item.description}
                 </p>
               </div>
-              <div className="relative flex-1 w-full aspect-square overflow-hidden rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
+              <div className="relative flex-1 w-full aspect-square overflow-hidden  shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
                   className="object-cover object-top"
-                  sizes="(max-width: 768px) 90vw, 600px"
+                  sizes="(max-width: 768px) 95vw, 702px"
                   priority={index === 0}
                 />
               </div>

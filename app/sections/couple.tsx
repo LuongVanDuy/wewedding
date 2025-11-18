@@ -85,7 +85,7 @@ export function CoupleSection() {
                       </div>
                     </div>
                   </div>
-                  <div className="p-2 sm:p-4 pb-0 text-center flex flex-col gap-1.5 text-slate-700 items-center flex-1">
+                  <div className="p-2 sm:p-4 pb-0 text-center flex flex-col gap-1.5  items-center flex-1">
                     <h3
                       className={`${alexBrush.className} text-[34px] md:text-[40px] font-medium tracking-wide`}
                     >
@@ -97,7 +97,7 @@ export function CoupleSection() {
                         {item.includes(":") ? (
                           <>
                             {item.split(":")[0]} :{" "}
-                            <span className="text-slate-800 font-semibold text-base ">
+                            <span className=" font-semibold text-base ">
                               {item.split(":")[1]}
                             </span>
                           </>
@@ -106,7 +106,7 @@ export function CoupleSection() {
                         )}
                       </div>
                     ))}
-                    <div className="text-center text-sm  text-slate-600">
+                    <div className="text-center text-sm  ">
                       Tư gia : {card.address}
                     </div>
                   </div>

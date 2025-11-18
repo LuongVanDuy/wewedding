@@ -103,7 +103,6 @@ export const siteContent = {
     title: "Gửi lời chúc đến đôi uyên ương",
     description:
       "Cảm ơn tất cả tình cảm của cô dì chú bác, bạn bè và anh chị em đã dành cho vợ chồng mình. Mọi món quà đều là động lực lớn để chúng mình xây dựng tổ ấm.",
-    buttonLabel: "Mở hộp quà",
     gifts: [
       {
         role: "Chú rể",
