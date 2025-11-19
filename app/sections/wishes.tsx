@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -29,7 +29,7 @@ const GiftCard = ({
   <div
     className={`w-full rounded-[28px] bg-white p-5 text-center shadow-[0_20px_45px_rgba(15,23,42,0.1)] ${className}`}
   >
-    <div className="relative mx-auto mb-4 h-48 w-48 overflow-hidden rounded-2xl bg-slate-100 p-4">
+    <div className="relative mx-auto mb-4 h-48 w-48 overflow-hidden bg-slate-100 p-4">
       <Image
         src={qr}
         alt={`QR ${role}`}
@@ -39,7 +39,9 @@ const GiftCard = ({
       />
     </div>
     <p className={`${cormorant.className} text-2xl text-[#1f2a44]`}>{role}</p>
-    <p className="mt-1 text-lg font-semibold text-slate-800 uppercase">{name}</p>
+    <p className="mt-1 text-lg font-semibold text-slate-800 uppercase">
+      {name}
+    </p>
     <div className="mt-1 text-sm text-slate-500">{bank}</div>
     <button
       onClick={onCopy}
@@ -55,14 +57,7 @@ const GiftCard = ({
         strokeWidth={1.75}
       >
         <path d="M8 17H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2" />
-        <rect
-          x="10"
-          y="9"
-          width="10"
-          height="12"
-          rx="2"
-          ry="2"
-        />
+        <rect x="10" y="9" width="10" height="12" rx="2" ry="2" />
       </svg>
     </button>
   </div>
@@ -102,7 +97,9 @@ export function WishesSection() {
               height={100}
               className="w-40 h-20 md:w-48 md:h-24 lg:w-[200px] lg:h-[100px]"
             />
-            <h2 className={`${cormorant.className} text-4xl md:text-5xl font-bold`}>
+            <h2
+              className={`${cormorant.className} text-4xl md:text-5xl font-bold`}
+            >
               {wishes.title}
             </h2>
             <p className="text-base md:text-lg text-white/90 max-w-2xl">
@@ -110,9 +107,9 @@ export function WishesSection() {
             </p>
             <button
               onClick={() => setOpen(true)}
-              className="relative animate-shake  mt-4 inline-flex h-[150px] w-[150px] flex-col items-center justify-center gap-2 rounded-2xl border-2 border-white/70 bg-white/10 px-4 backdrop-blur transition hover:scale-105"
+              className="relative animate-shake  mt-4 inline-flex h-[150px] w-[150px] flex-col items-center justify-center gap-2 border-2 border-white/70 bg-white/10 px-4 backdrop-blur transition hover:scale-105"
             >
-              <span className="absolute inset-0 rounded-2xl bg-white/5 animate-pulse" />
+              <span className="absolute inset-0 bg-white/5 animate-pulse" />
               <Image
                 src={wishes.giftIcon}
                 alt="Gift box"
@@ -120,7 +117,6 @@ export function WishesSection() {
                 height={100}
                 className="relative z-10 h-25 w-25 "
               />
-            
             </button>
           </ScrollReveal>
         </div>
@@ -137,11 +133,12 @@ export function WishesSection() {
               onClick={() => setOpen(false)}
               className="absolute right-4 top-4 rounded-full bg-slate-100 p-2 text-slate-600 hover:bg-slate-200"
             >
-              <span className="sr-only">Close</span>
-              ✕
+              <span className="sr-only">Close</span>✕
             </button>
             <div className="flex flex-col items-center text-center gap-3">
-              <h3 className={`${cormorant.className} text-3xl md:text-4xl text-slate-800`}>
+              <h3
+                className={`${cormorant.className} text-3xl md:text-4xl text-slate-800`}
+              >
                 Gửi quà cho cặp đôi
               </h3>
             </div>

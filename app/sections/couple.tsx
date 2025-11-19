@@ -45,7 +45,7 @@ export function CoupleSection() {
     >
       <div className="absolute inset-0 " />
       <div className="relative w-full px-4 py-5 lg:py-8">
-        <div className="w-full max-w-4xl mx-auto md:rounded-t-full max-md:rounded-2xl flex items-center justify-center md:py-6 py-4 backdrop-blur-md border border-white/70  overflow-hidden">
+        <div className="w-full max-w-4xl mx-auto md:rounded-t-full  flex items-center justify-center md:py-6 py-4 backdrop-blur-md border border-white/70  overflow-hidden">
           <div className="flex w-full flex-col px-3 sm:px-5">
             <ScrollReveal>
               <div className="flex flex-col items-center justify-center text-center space-y-2">

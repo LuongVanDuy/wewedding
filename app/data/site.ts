@@ -3,10 +3,10 @@ export const siteContent = {
     greeting: "Lời Ngỏ",
     message:
       "Cảm ơn bạn đã dành tình cảm cho vợ chồng mình. Chúng mình biết các bạn đều đang rất bận, bận với công việc, với cuộc sống và với cả gia đình bạn. Nhưng thực sự sẽ rất tuyệt vời nếu như ngày Hạnh Phúc của chúng mình có thêm sự góp mặt của bạn và người thương. Vợ chồng mình rất hi vọng sẽ có mặt bạn trong ngày quan trọng này để chứng kiến và chia sẻ niềm hạnh phúc này cùng chúng mình. Một lần nữa, chân thành cảm ơn tất cả các bạn ❤️",
-   
+
     videoSrc: "/assets/videos/video.mp4",
     posterSrc: "/assets/images/hero.webp",
-    greetingImage: "/assets/images/story_1.webp",
+    greetingImage: "/assets/images/img1.png",
   },
   couple: {
     groom: {
@@ -23,7 +23,7 @@ export const siteContent = {
     },
   },
   invitation: {
-    date: "2025-11-23T08:00:00+07:00",
+    date: "2025-11-30T08:00:00+07:00",
     label: "Thiệp Mời",
     icon: "/assets/images/icon-loingo.webp",
     savedate: "/assets/images/savedate.webp",
@@ -65,9 +65,6 @@ export const siteContent = {
     { src: "/assets/images/anhcuoi-2.webp", alt: "Ảnh cưới 2" },
     { src: "/assets/images/anhcuoi-11.webp", alt: "Ảnh cưới 11" },
     { src: "/assets/images/anhcuoi-13.webp", alt: "Ảnh cưới 13" },
-
-
-
   ],
   guestbook: [
     {
@@ -123,4 +120,3 @@ export const siteContent = {
 };
 
 export type SiteContent = typeof siteContent;
-

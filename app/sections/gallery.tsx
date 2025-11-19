@@ -27,7 +27,9 @@ export function GallerySection() {
                 height={100}
                 className="w-40 h-20 md:w-48 md:h-24 lg:w-[200px] lg:h-[100px]"
               />
-              <h2 className={`${cormorant.className} text-4xl md:text-6xl mt-2 `}>
+              <h2
+                className={`${cormorant.className} text-4xl md:text-6xl mt-2 `}
+              >
                 Ảnh Cưới
               </h2>
             </div>
@@ -41,7 +43,7 @@ export function GallerySection() {
                   className="mb-4 break-inside-avoid"
                   delay={(index % 4) * 0.05}
                 >
-                  <div className="overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:scale-[1.02]">
+                  <div className="overflow-hidden rounded-xl shadow-md transition-transform duration-500 hover:scale-[1.02]">
                     <Image
                       src={image.src}
                       alt={image.alt}

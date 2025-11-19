@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { type ReactNode } from "react";
 import { motion, Variants } from "framer-motion";
@@ -9,7 +9,6 @@ type ScrollRevealProps = {
   delay?: number;
   from?: "up" | "down" | "left" | "right";
   duration?: number;
-  once?: boolean;
   blur?: boolean;
 };
 
@@ -29,8 +28,7 @@ export function ScrollReveal({
   delay = 0,
   duration = 0.9,
   from = "up",
-  once = true,
-  blur = true,
+  blur = false,
 }: ScrollRevealProps) {
   const offset = directions[from];
 
@@ -56,7 +54,7 @@ export function ScrollReveal({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount: 0.2 }}
+      viewport={{ once: false, amount: 0.2 }}
       variants={variants}
       transition={{
         delay,
@@ -68,4 +66,3 @@ export function ScrollReveal({
     </motion.div>
   );
 }
-

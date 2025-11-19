@@ -75,7 +75,7 @@ export function InvitationSection() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="relative w-[90vw] max-w-[500px] h-[60vh] md:h-[80vh] overflow-hidden rounded-[30px] shadow-[0_0px_25px_-5px_rgba(0,0,0,0.2)]">
+            <div className="relative w-[90vw] max-w-[500px] h-[60vh] md:h-[80vh] overflow-hidden shadow-[0_0px_25px_-5px_rgba(0,0,0,0.2)]">
               <Image
                 src={invitation.invitation}
                 alt="Wedding invitation"

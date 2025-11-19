@@ -33,15 +33,15 @@ export default function Home() {
             alt="Thank you"
             width={500}
             height={280}
-            className="w-full max-w-sm rounded-2xl object-cover "
+            className="w-full max-w-sm object-cover "
           />
           <div className="mx-auto max-w-2xl text-center text-slate-600">
             <p className="text-sm md:text-base">
               Cảm ơn bạn đã chia sẻ khoảnh khắc đặc biệt cùng chúng tôi!
               <br className="hidden md:block" />
-              Chúng tôi trân trọng từng giây phút và mong nhận được sự chúc phúc từ bạn.
+              Chúng tôi trân trọng từng giây phút và mong nhận được sự chúc phúc
+              từ bạn.
             </p>
-           
           </div>
         </div>
       </footer>

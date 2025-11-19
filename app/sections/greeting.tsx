@@ -39,16 +39,18 @@ export function GreetingSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="mt-6 text-base md:text-lg text-slate-600">{hero.message}</p>
+          <p className="mt-6 text-base md:text-lg text-slate-600">
+            {hero.message}
+          </p>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.3}>
-          <div className="mt-10 w-full max-w-2xl overflow-hidden rounded-[36px] shadow-lg">
+        <ScrollReveal delay={0.3} className="w-full">
+          <div className="mt-10 w-full overflow-hidden shadow-lg">
             <Image
               src={hero.greetingImage}
               alt="Lời ngỏ"
-              width={800}
-              height={600}
+              width={1000}
+              height={1000}
               className="h-auto w-full object-cover"
             />
           </div>
@@ -57,4 +59,3 @@ export function GreetingSection() {
     </section>
   );
 }
-

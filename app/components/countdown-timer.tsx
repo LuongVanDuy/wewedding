@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
 
@@ -30,25 +30,40 @@ const calculate = (targetDate: string): Units => {
 };
 
 export function CountdownTimer({ targetDate }: { targetDate: string }) {
-  const [timeLeft, setTimeLeft] = useState<Units>(() => calculate(targetDate));
+  // Delay render cho đến khi client mount
+  const [mounted, setMounted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState<Units | null>(null);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    setTimeLeft(calculate(targetDate));
+
     const timer = setInterval(() => {
       setTimeLeft(calculate(targetDate));
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, [mounted, targetDate]);
 
   const labels = useMemo(
-    () => [
-      { label: "Ngày", value: timeLeft.days },
-      { label: "Giờ", value: timeLeft.hours },
-      { label: "Phút", value: timeLeft.minutes },
-      { label: "Giây", value: timeLeft.seconds },
-    ],
-    [timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds]
+    () =>
+      timeLeft
+        ? [
+            { label: "Ngày", value: timeLeft.days },
+            { label: "Giờ", value: timeLeft.hours },
+            { label: "Phút", value: timeLeft.minutes },
+            { label: "Giây", value: timeLeft.seconds },
+          ]
+        : [],
+    [timeLeft]
   );
+
+  if (!mounted || !timeLeft) return null; // tránh render trên server
 
   return (
     <div className="countdown-timer text-center">
@@ -67,12 +82,12 @@ export function CountdownTimer({ targetDate }: { targetDate: string }) {
             >
               {item.value}
             </span>
-            <span className="text-xs sm:text-sm text-[#3D3D3DCC]">{item.label}</span>
+            <span className="text-xs sm:text-sm text-[#3D3D3DCC]">
+              {item.label}
+            </span>
           </div>
         ))}
       </div>
     </div>
   );
 }
-
-
