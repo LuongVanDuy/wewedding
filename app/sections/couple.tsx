@@ -19,6 +19,8 @@ const alexBrush = localFont({
   fallback: ["Alex Brush", "cursive"],
 });
 
+const IMAGE_QUALITY = 100;
+
 export function CoupleSection() {
   const { couple } = siteContent;
 
@@ -55,6 +57,8 @@ export function CoupleSection() {
                   width={180}
                   height={90}
                   className="w-32 h-16 md:w-40 md:h-20 lg:w-[180px] lg:h-[90px]"
+                  quality={IMAGE_QUALITY}
+                  sizes="180px"
                 />
                 <h2
                   className={`${cormorantUpright.className} text-[36px] leading-tight md:text-[50px] tracking-wide`}
@@ -81,6 +85,8 @@ export function CoupleSection() {
                           width={340}
                           height={200}
                           className="w-full object-cover md:aspect-[3/4] aspect-square md:rounded-t-full max-md:rounded-full object-top"
+                          quality={IMAGE_QUALITY}
+                          sizes="(max-width: 640px) 80vw, 340px"
                         />
                       </div>
                     </div>

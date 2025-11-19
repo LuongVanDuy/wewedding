@@ -11,6 +11,8 @@ const cormorant = localFont({
   fallback: ["Cormorant Upright", "serif"],
 });
 
+const IMAGE_QUALITY = 100;
+
 export function GallerySection() {
   const { gallery } = siteContent;
 
@@ -26,6 +28,8 @@ export function GallerySection() {
                 width={200}
                 height={100}
                 className="w-40 h-20 md:w-48 md:h-24 lg:w-[200px] lg:h-[100px]"
+                quality={IMAGE_QUALITY}
+                sizes="200px"
               />
               <h2
                 className={`${cormorant.className} text-4xl md:text-6xl mt-2 `}
@@ -52,6 +56,7 @@ export function GallerySection() {
                       className="h-auto w-full object-contain"
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       loading="lazy"
+                      quality={IMAGE_QUALITY}
                     />
                   </div>
                 </ScrollReveal>

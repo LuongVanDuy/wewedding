@@ -11,6 +11,8 @@ const cormorant = localFont({
   fallback: ["Cormorant Upright", "serif"],
 });
 
+const IMAGE_QUALITY = 100;
+
 export function RSVPSection() {
   const { contact } = siteContent;
 
@@ -27,6 +29,8 @@ export function RSVPSection() {
                   width={200}
                   height={100}
                   className="w-40 h-20 md:w-48 md:h-24 lg:w-[200px] lg:h-[100px]"
+                  quality={IMAGE_QUALITY}
+                  sizes="200px"
                 />
                 <h2
                   className={`${cormorant.className} text-4xl md:text-5xl text-[#1f2937]`}
@@ -39,13 +43,15 @@ export function RSVPSection() {
               </div>
             </div>
           </ScrollReveal>
-          <ScrollReveal className="relative w-full xl:flex-1 overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.15)]">
+          <ScrollReveal className="relative w-full xl:flex-1 overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.15)] bg-white">
             <Image
               src={contact.image}
               alt="Thông tin phản hồi"
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              width={1600}
+              height={900}
+              className="w-full h-auto object-contain"
+              sizes="100vw"
+              quality={IMAGE_QUALITY}
               priority
             />
           </ScrollReveal>

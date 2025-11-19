@@ -20,6 +20,8 @@ const cormorantUpright = localFont({
   fallback: ["Cormorant Upright", "Cormorant Upright Fallback", "serif"],
 });
 
+const IMAGE_QUALITY = 100;
+
 export function InvitationSection() {
   const { invitation } = siteContent;
   const formattedDate = new Date(invitation.date)
@@ -42,6 +44,8 @@ export function InvitationSection() {
                 width={200}
                 height={100}
                 className="w-40 h-20 md:w-48 md:h-24 lg:w-[200px] lg:h-[100px]"
+                quality={IMAGE_QUALITY}
+                sizes="200px"
               />
               <h2
                 className={`text-6xl font-bold mt-2  ${cormorantUpright.className}`}
@@ -65,6 +69,7 @@ export function InvitationSection() {
                   fill
                   sizes="(max-width: 768px) 260px, 300px"
                   className="object-cover"
+                  quality={IMAGE_QUALITY}
                   priority
                 />
               </div>
@@ -82,6 +87,7 @@ export function InvitationSection() {
                 fill
                 className="object-contain"
                 sizes="(max-width: 768px) 90vw, 500px"
+                quality={IMAGE_QUALITY}
                 priority
               />
             </div>

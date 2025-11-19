@@ -56,8 +56,23 @@ section {
 
 @theme inline {
   --animate-shake: shake 1.5s ease-in-out infinite;
+  --animate-audio: audio 1.5s ease-in-out infinite;
 }
 
 .animate-shake {
   animation: shake 1.5s ease-in-out infinite;
+}
+
+.animate-audio {
+  animation: audio 1.5s ease-in-out infinite;
+}
+
+@keyframes audio {
+  0%,to {
+      transform: scale(1)
+  }
+
+  50% {
+      transform: scale(.8)
+  }
 }

@@ -6,7 +6,7 @@ export const siteContent = {
 
     videoSrc: "/assets/videos/video.mp4",
     posterSrc: "/assets/images/hero.webp",
-    greetingImage: "/assets/images/img1.png",
+    greetingImage: "/assets/images/hero.webp",
   },
   couple: {
     groom: {

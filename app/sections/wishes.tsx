@@ -14,6 +14,8 @@ const cormorant = localFont({
   fallback: ["Cormorant Upright", "serif"],
 });
 
+const IMAGE_QUALITY = 100;
+
 const GiftCard = ({
   role,
   name,
@@ -34,8 +36,9 @@ const GiftCard = ({
         src={qr}
         alt={`QR ${role}`}
         fill
-        sizes="200px"
+        sizes="12rem"
         className="object-contain"
+        quality={IMAGE_QUALITY}
       />
     </div>
     <p className={`${cormorant.className} text-2xl text-[#1f2a44]`}>{role}</p>
@@ -96,6 +99,8 @@ export function WishesSection() {
               width={200}
               height={100}
               className="w-40 h-20 md:w-48 md:h-24 lg:w-[200px] lg:h-[100px]"
+              quality={IMAGE_QUALITY}
+              sizes="200px"
             />
             <h2
               className={`${cormorant.className} text-4xl md:text-5xl font-bold`}
@@ -116,6 +121,8 @@ export function WishesSection() {
                 width={100}
                 height={100}
                 className="relative z-10 h-25 w-25 "
+                quality={IMAGE_QUALITY}
+                sizes="100px"
               />
             </button>
           </ScrollReveal>

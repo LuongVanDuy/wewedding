@@ -11,6 +11,8 @@ const greatVibes = localFont({
   display: "swap",
 });
 
+const IMAGE_QUALITY = 100;
+
 export function GreetingSection() {
   const { hero } = siteContent;
 
@@ -27,6 +29,8 @@ export function GreetingSection() {
             width={200}
             height={100}
             className="mb-4"
+            quality={IMAGE_QUALITY}
+            sizes="200px"
           />
         </ScrollReveal>
 
@@ -44,7 +48,7 @@ export function GreetingSection() {
           </p>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.3} className="w-full">
+        <ScrollReveal delay={0.3} className="w-full" scaleFrom={0.9}>
           <div className="mt-10 w-full overflow-hidden shadow-lg">
             <Image
               src={hero.greetingImage}
@@ -52,6 +56,8 @@ export function GreetingSection() {
               width={1000}
               height={1000}
               className="h-auto w-full object-cover"
+              quality={IMAGE_QUALITY}
+              sizes="(max-width: 768px) 90vw, 1000px"
             />
           </div>
         </ScrollReveal>

@@ -10,6 +10,7 @@ type ScrollRevealProps = {
   from?: "up" | "down" | "left" | "right";
   duration?: number;
   blur?: boolean;
+  scaleFrom?: number;
 };
 
 const directions: Record<
@@ -29,6 +30,7 @@ export function ScrollReveal({
   duration = 0.9,
   from = "up",
   blur = false,
+  scaleFrom = 0.96,
 }: ScrollRevealProps) {
   const offset = directions[from];
 
@@ -38,7 +40,7 @@ export function ScrollReveal({
       x: offset.x,
       y: offset.y,
       filter: blur ? "blur(8px)" : "blur(0px)",
-      scale: 0.96,
+      scale: scaleFrom,
     },
     visible: {
       opacity: 1,

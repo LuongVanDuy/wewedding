@@ -15,6 +15,8 @@ const italicSerif = localFont({
   fallback: ["Cormorant Upright", "serif"],
 });
 
+const IMAGE_QUALITY = 100;
+
 export function LoveStorySection() {
   const { loveStory } = siteContent;
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -71,6 +73,8 @@ export function LoveStorySection() {
                     width={180}
                     height={70}
                     className="h-auto w-32"
+                    quality={IMAGE_QUALITY}
+                    sizes="180px"
                   />
                   <h3 className="text-2xl text-white">{item.title}</h3>
                   <p className="text-sm  text-[#bebebe]">{item.description}</p>
@@ -82,6 +86,7 @@ export function LoveStorySection() {
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 768px) 90vw"
+                    quality={IMAGE_QUALITY}
                     priority={index === 0}
                   />
                 </div>
@@ -127,6 +132,8 @@ export function LoveStorySection() {
                   width={200}
                   height={80}
                   className="w-32 md:w-48 h-auto"
+                  quality={IMAGE_QUALITY}
+                  sizes="(max-width: 768px) 128px, 200px"
                 />
                 <h3 className="text-2xl md:text-4xl text-white  tracking-[0.05em]">
                   {item.title}
@@ -142,6 +149,7 @@ export function LoveStorySection() {
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 768px) 95vw, 702px"
+                  quality={IMAGE_QUALITY}
                   priority={index === 0}
                 />
               </div>

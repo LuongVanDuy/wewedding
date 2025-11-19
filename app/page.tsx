@@ -34,6 +34,8 @@ export default function Home() {
             width={500}
             height={280}
             className="w-full max-w-sm object-cover "
+            quality={100}
+            sizes="(max-width: 768px) 90vw, 500px"
           />
           <div className="mx-auto max-w-2xl text-center text-slate-600">
             <p className="text-sm md:text-base">
