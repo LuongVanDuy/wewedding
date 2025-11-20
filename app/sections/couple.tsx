@@ -86,7 +86,7 @@ export function CoupleSection() {
                           height={200}
                           className="w-full object-cover md:aspect-[3/4] aspect-square md:rounded-t-full max-md:rounded-full object-top"
                           quality={IMAGE_QUALITY}
-                          sizes="(max-width: 640px) 80vw, 340px"
+                          sizes="(max-width: 640px) 160vw, 1280px"
                         />
                       </div>
                     </div>
@@ -99,7 +99,7 @@ export function CoupleSection() {
                     </h3>
                     <div className="w-full bg-black/30 h-px" />
                     {card.parents.map((item) => (
-                      <div key={item} className="text-sm ">
+                      <div key={item} className="text-[#454545]">
                         {item.includes(":") ? (
                           <>
                             {item.split(":")[0]} :{" "}
@@ -112,9 +112,7 @@ export function CoupleSection() {
                         )}
                       </div>
                     ))}
-                    <div className="text-center text-sm  ">
-                      Tư gia : {card.address}
-                    </div>
+                    <div className="text-center  ">Tư gia : {card.address}</div>
                   </div>
                 </ScrollReveal>
               ))}

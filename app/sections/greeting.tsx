@@ -19,7 +19,7 @@ export function GreetingSection() {
   return (
     <section
       id="greeting"
-      className="flex min-h-screen items-center justify-center bg-[#fdf9f7] py-20"
+      className="flex items-center justify-center bg-[#f2f2f2] py-8 md:py-20"
     >
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-6 text-center">
         <ScrollReveal>
@@ -28,7 +28,7 @@ export function GreetingSection() {
             alt="Lời ngỏ"
             width={200}
             height={100}
-            className="mb-4"
+            className="w-40 h-20 md:w-48 md:h-24 lg:w-[200px] lg:h-[100px]"
             quality={IMAGE_QUALITY}
             sizes="200px"
           />

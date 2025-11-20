@@ -33,7 +33,7 @@ export function InvitationSection() {
     .replace(/\//g, ".");
 
   return (
-    <section id="invitation" className="bg-[#fdf9f7]">
+    <section id="invitation" className="bg-[#f2f2f2]">
       <div className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-4 text-center md:gap-10">
           <ScrollReveal>
@@ -62,7 +62,7 @@ export function InvitationSection() {
               >
                 {formattedDate}
               </div>
-              <div className="relative  h-[90px] w-[260px] md:h-[100px] md:w-[300px]">
+              <div className="relative h-[90px] w-[260px] md:h-[100px] md:w-[300px]">
                 <Image
                   src={invitation.savedate}
                   alt="Save the date"
@@ -80,7 +80,7 @@ export function InvitationSection() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <div className="relative w-[90vw] max-w-[500px] h-[60vh] md:h-[80vh] overflow-hidden shadow-[0_0px_25px_-5px_rgba(0,0,0,0.2)]">
+            <div className="relative w-[90vw] max-w-[500px] aspect-[2/2.8] overflow-hidden shadow-[0_0px_25px_-5px_rgba(0,0,0,0.2)]">
               <Image
                 src={invitation.invitation}
                 alt="Wedding invitation"

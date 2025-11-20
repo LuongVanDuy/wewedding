@@ -6,10 +6,11 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative isolate flex w-full items-center justify-center overflow-hidden bg-black md:min-h-[100dvh]"
+      className="h-[40dvh] md:h-[80dvh] xl:h-screen w-screen relative bg-primary/10 overflow-hidden"
     >
+      <div className="absolute inset-0 z-10 bg-primary/0"></div>
       <video
-        className="w-full max-w-[100vw] object-contain md:h-full md:w-auto md:object-cover"
+        className="w-full h-full object-contain overflow-hidden"
         autoPlay
         muted
         loop
@@ -21,4 +22,3 @@ export function HeroSection() {
     </section>
   );
 }
-

@@ -1,21 +1,12 @@
-'use client';
+"use client";
 
 import Image from "next/image";
-import localFont from "next/font/local";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { siteContent } from "../data/site";
 import { ScrollReveal } from "../components/scroll-reveal";
 
-const italicSerif = localFont({
-  src: "../fonts/CormorantUpright-Medium.ttf",
-  weight: "500",
-  style: "italic",
-  display: "swap",
-  fallback: ["Cormorant Upright", "serif"],
-});
-
-const IMAGE_QUALITY = 100;
+const IMAGE_QUALITY = 200;
 
 export function LoveStorySection() {
   const { loveStory } = siteContent;
@@ -51,7 +42,10 @@ export function LoveStorySection() {
     return () => window.removeEventListener("resize", measure);
   }, [loveStory.length]);
 
-  const x = useTransform(scrollYProgress, (value: number) => -value * maxTranslate);
+  const x = useTransform(
+    scrollYProgress,
+    (value: number) => -value * maxTranslate
+  );
 
   if (isMobile) {
     return (
@@ -61,11 +55,7 @@ export function LoveStorySection() {
             <ScrollReveal key={item.title}>
               <article className="flex flex-col gap-5 rounded-[24px] border border-white/10 bg-white/5 p-6 shadow-lg">
                 <div className="flex flex-col items-center gap-4 text-center">
-                  <p
-                    className={`text-white text-3xl italic `}
-                  >
-                    Love Story
-                  </p>
+                  <p className={`text-white text-3xl italic `}>Love Story</p>
                   <div className="h-px w-20 bg-white/40" />
                   <Image
                     src={item.image2}
@@ -85,7 +75,7 @@ export function LoveStorySection() {
                     alt={item.title}
                     fill
                     className="object-cover object-top"
-                    sizes="(max-width: 768px) 90vw"
+                    sizes="(max-width: 900px) 90vw"
                     quality={IMAGE_QUALITY}
                     priority={index === 0}
                   />
@@ -120,9 +110,7 @@ export function LoveStorySection() {
               className="w-screen h-screen px-6 md:px-12 flex flex-col xl:flex-row items-center gap-8 md:gap-12"
             >
               <div className="flex flex-1 flex-col items-center justify-center text-center gap-5 px-20">
-                <p
-                  className={`text-white text-2xl md:text-5xl italic `}
-                >
+                <p className={`text-white text-2xl md:text-5xl italic `}>
                   Love Story
                 </p>
                 <div className="h-px w-full bg-white/40" />
@@ -148,7 +136,7 @@ export function LoveStorySection() {
                   alt={item.title}
                   fill
                   className="object-cover object-top"
-                  sizes="(max-width: 768px) 95vw, 702px"
+                  sizes="(max-width: 1240px) 95vw, 1240px"
                   quality={IMAGE_QUALITY}
                   priority={index === 0}
                 />

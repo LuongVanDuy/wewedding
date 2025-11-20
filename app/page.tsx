@@ -37,7 +37,7 @@ export default function Home() {
             quality={100}
             sizes="(max-width: 768px) 90vw, 500px"
           />
-          <div className="mx-auto max-w-2xl text-center text-slate-600">
+          <div className="mx-auto max-w-2xl text-center text-slate-600 mb-4">
             <p className="text-sm md:text-base">
               Cảm ơn bạn đã chia sẻ khoảnh khắc đặc biệt cùng chúng tôi!
               <br className="hidden md:block" />
@@ -45,6 +45,10 @@ export default function Home() {
               từ bạn.
             </p>
           </div>
+
+          <p className="text-gray-500 text-sm">
+            © 2025 Wedding Moments. All rights reserved by DuyLV.
+          </p>
         </div>
       </footer>
     </div>

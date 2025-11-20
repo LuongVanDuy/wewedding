@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -54,7 +54,7 @@ export function MusicPlayer({ title, artist, src }: Props) {
         type="button"
         onClick={togglePlayback}
         aria-label={isPlaying ? "Tạm dừng nhạc" : "Phát nhạc"}
-        className="relative flex items-center gap-2"
+        className="relative flex items-center gap-2 cursor-pointer"
       >
         <div className="absolute">
           <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-[#ffa1a2]">
@@ -105,12 +105,9 @@ export function MusicPlayer({ title, artist, src }: Props) {
           <div className="text-sm font-semibold">
             {isPlaying ? "Đang phát" : "Phát nhạc"}
           </div>
-     
         </div>
       </button>
       <audio ref={audioRef} src={src} loop preload="none" />
     </div>
   );
 }
-
-

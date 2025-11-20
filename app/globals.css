@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff9f7;
+  --primary: 0 0% 27%;
+  --background: #f2f2f2;
   --foreground: #0f172a;
   --accent: #f472b6;
+  --color-primary: hsl(var(--primary));
 }
 
 html {
@@ -26,6 +28,7 @@ body {
     sans-serif;
   background-color: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
 }
 
 section {
@@ -37,20 +40,21 @@ section {
 }
 
 @keyframes shake {
-  0%,to {
-      transform: rotate(0)
+  0%,
+  to {
+    transform: rotate(0);
   }
 
   25% {
-      transform: rotate(-15deg)scale(1.1)
+    transform: rotate(-15deg) scale(1.1);
   }
 
   50% {
-      transform: rotate(15deg)scale(1.2)
+    transform: rotate(15deg) scale(1.2);
   }
 
   75% {
-      transform: rotate(-10deg)scale(1.1)
+    transform: rotate(-10deg) scale(1.1);
   }
 }
 
@@ -68,11 +72,20 @@ section {
 }
 
 @keyframes audio {
-  0%,to {
-      transform: scale(1)
+  0%,
+  to {
+    transform: scale(1);
   }
 
   50% {
-      transform: scale(.8)
+    transform: scale(0.8);
   }
+}
+
+.bg-primary\/0 {
+  background-color: color-mix(in oklab, var(--color-primary) 0%, transparent);
+}
+
+.bg-primary\/10 {
+  background-color: color-mix(in oklab, var(--color-primary) 10%, transparent);
 }

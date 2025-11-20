@@ -112,7 +112,7 @@ export function WishesSection() {
             </p>
             <button
               onClick={() => setOpen(true)}
-              className="relative animate-shake  mt-4 inline-flex h-[150px] w-[150px] flex-col items-center justify-center gap-2 border-2 border-white/70 bg-white/10 px-4 backdrop-blur transition hover:scale-105"
+              className=" cursor-pointer rounded-2xl relative animate-shake  mt-4 inline-flex h-[150px] w-[150px] flex-col items-center justify-center gap-2 border-2 border-white/70 bg-white/10 px-4 backdrop-blur transition hover:scale-105"
             >
               <span className="absolute inset-0 bg-white/5 animate-pulse" />
               <Image
@@ -138,7 +138,7 @@ export function WishesSection() {
           <div className="relative z-10 w-full max-w-4xl rounded-3xl bg-white p-6 shadow-2xl">
             <button
               onClick={() => setOpen(false)}
-              className="absolute right-4 top-4 rounded-full bg-slate-100 p-2 text-slate-600 hover:bg-slate-200"
+              className="w-[40px] cursor-pointer absolute right-4 top-4 rounded-full bg-slate-100 p-2 text-slate-600 hover:bg-slate-200"
             >
               <span className="sr-only">Close</span>✕
             </button>

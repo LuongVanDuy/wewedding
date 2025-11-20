@@ -17,8 +17,8 @@ export function GallerySection() {
   const { gallery } = siteContent;
 
   return (
-    <section id="gallery" className="bg-[#fdf9f7]">
-      <div className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+    <section id="gallery" className="bg-[#f2f2f2]">
+      <div className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
         <div className="mx-auto flex flex-col items-center gap-6 text-center md:gap-8">
           <ScrollReveal>
             <div className="flex flex-col items-center">
@@ -54,7 +54,7 @@ export function GallerySection() {
                       width={1000}
                       height={1000}
                       className="h-auto w-full object-contain"
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 50vw"
                       loading="lazy"
                       quality={IMAGE_QUALITY}
                     />
