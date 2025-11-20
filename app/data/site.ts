@@ -13,13 +13,13 @@ export const siteContent = {
       name: "Lương Đức",
       parents: ["Con ông: Lương Văn Huỳnh", "Con bà: Lương Thị Hợi"],
       address: "Tây Nghĩa · Hải Hưng · Ninh Bình",
-      portrait: "/assets/images/2.png",
+      portrait: "/assets/images/chure.jpg",
     },
     bride: {
       name: "Phương Nhung",
       parents: ["Con ông: Ngô Văn Đoàn", "Con bà: Lương Thị Hồng"],
       address: "Nam Nghĩa · Hải Hưng · Ninh Bình",
-      portrait: "/assets/images/1.png",
+      portrait: "/assets/images/codau2.jpg",
     },
   },
   invitation: {
@@ -53,7 +53,7 @@ export const siteContent = {
     },
   ],
   gallery: [
-    { src: "/assets/images/img1.jpg", alt: "Ảnh cưới 2" },
+    { src: "/assets/images/new1.jpg", alt: "Ảnh cưới 2" },
     { src: "/assets/images/img3.jpg", alt: "Ảnh cưới 3" },
     { src: "/assets/images/img4.jpg", alt: "Ảnh cưới 4" },
     { src: "/assets/images/img5.jpg", alt: "Ảnh cưới 5" },
@@ -62,9 +62,9 @@ export const siteContent = {
     { src: "/assets/images/img8.jpg", alt: "Ảnh cưới 8" },
     { src: "/assets/images/img9.jpg", alt: "Ảnh cưới 9" },
     { src: "/assets/images/img10.jpg", alt: "Ảnh cưới 10" },
-    { src: "/assets/images/img11.jpg", alt: "Ảnh cưới 11" },
+    { src: "/assets/images/new2.jpg", alt: "Ảnh cưới 11" },
     { src: "/assets/images/img12.jpg", alt: "Ảnh cưới 12" },
-    { src: "/assets/images/img13.jpg", alt: "Ảnh cưới 13" },
+    { src: "/assets/images/new3.jpg", alt: "Ảnh cưới 13" },
   ],
   guestbook: [
     {

@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="h-[40dvh] md:h-[80dvh] xl:h-screen w-screen relative bg-primary/10 overflow-hidden"
+      className="h-[40dvh] md:h-[80dvh] xl:h-screen w-screen relative bg-primary/10 overflow-hidden w-full"
     >
       <div className="absolute inset-0 z-10 bg-primary/0"></div>
       <video

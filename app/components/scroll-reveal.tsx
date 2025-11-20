@@ -11,6 +11,7 @@ type ScrollRevealProps = {
   duration?: number;
   blur?: boolean;
   scaleFrom?: number;
+  once?: boolean;
 };
 
 const directions: Record<
@@ -31,6 +32,7 @@ export function ScrollReveal({
   from = "up",
   blur = false,
   scaleFrom = 0.96,
+  once = false,
 }: ScrollRevealProps) {
   const offset = directions[from];
 
@@ -56,7 +58,7 @@ export function ScrollReveal({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once, amount: 0.2 }}
       variants={variants}
       transition={{
         delay,

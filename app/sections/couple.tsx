@@ -82,11 +82,12 @@ export function CoupleSection() {
                         <Image
                           src={card.portrait}
                           alt={card.name}
-                          width={340}
-                          height={200}
                           className="w-full object-cover md:aspect-[3/4] aspect-square md:rounded-t-full max-md:rounded-full object-top"
                           quality={IMAGE_QUALITY}
-                          sizes="(max-width: 640px) 160vw, 1280px"
+                          width={1000}
+                          height={1000}
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 50vw"
+                          loading="lazy"
                         />
                       </div>
                     </div>

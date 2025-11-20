@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 import { SmoothScrollProvider } from "./providers/smooth-scroll-provider";
 
 const geistSans = Geist({
@@ -21,15 +23,29 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Lễ thành hôn của Lương Đức ♥ Phương Nhung | Wedding Invitation",
+  title: "Lễ thành hôn - Lương Đức ♥ Phương Nhung",
   description:
-    "Thiệp cưới online Lương Đức & Phương Nhung · Save the date 30.11 · Hân hoan chào đón sự hiện diện của bạn.",
+    "Chúng tôi trân trọng mời bạn đến dự lễ thành hôn của Lương Đức & Phương Nhung vào ngày 30.11. Hãy lưu ngày này cùng chúng tôi!",
   openGraph: {
-    title: "Lễ thành hôn của Lương Đức ♥ Phương Nhung | Wedding Invitation",
+    title: "Lương Đức ♥ Phương Nhung - Hôn lễ của chúng tôi",
     description:
-      "Thiệp cưới online Lương Đức & Phương Nhung · Save the date 30.11 · Hân hoan chào đón sự hiện diện của bạn.",
-    url: "https://www.wewedding.site/",
-    siteName: "We Wedding",
+      "Hân hạnh mời bạn tham dự lễ cưới của Lương Đức & Phương Nhung · Save the date 30.11",
+    images: [
+      {
+        url: "/assets/images/anhcuoi.png",
+        width: 1200,
+        height: 630,
+        alt: "Lương Đức & Phương Nhung - Wedding Invitation",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lễ thành hôn - Lương Đức ♥ Phương Nhung",
+    description:
+      "Chúng tôi trân trọng mời bạn đến dự lễ cưới của chúng tôi vào ngày 30.11. Hãy lưu ngày này cùng chúng tôi!",
+    images: ["/assets/images/anhcuoi.png"],
   },
 };
 
