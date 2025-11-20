@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, type ReactNode } from "react";
 import Lenis from "lenis";
@@ -15,7 +15,6 @@ export function SmoothScrollProvider({ children }: Props) {
     const lenis = new Lenis({
       duration: 1.2,
       smoothWheel: true,
-      smoothTouch: false,
       gestureOrientation: "vertical",
       wheelMultiplier: 1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -48,4 +47,3 @@ export function SmoothScrollProvider({ children }: Props) {
 
   return children;
 }
-
