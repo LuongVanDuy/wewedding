@@ -81,7 +81,7 @@ export const siteContent = {
   music: {
     title: "Bài Này Không Để Đi Diễn",
     artist: "Acoustic Cover",
-    audioSrc: "/assets/music/bai-nay-khong-de-di-dien.mp3",
+    audioSrc: "/assets/music/Beautiful-In-White.mp3",
   },
   contact: {
     title: "Thông Tin Phản Hồi",

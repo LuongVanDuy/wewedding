@@ -15,6 +15,8 @@ export function HeroSection() {
         muted
         loop
         playsInline
+        webkit-playsinline="true"
+        preload="auto"
         poster={hero.posterSrc}
       >
         <source src={hero.videoSrc} type="video/mp4" />
