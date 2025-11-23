@@ -27,7 +27,7 @@ export const siteContent = {
     label: "Thiệp Mời",
     icon: "/assets/images/icon-loingo.webp",
     savedate: "/assets/images/savedate.webp",
-    invitation: "/assets/images/image2.png",
+    invitation: "/assets/images/thiepmoi.png",
   },
   loveStory: [
     {

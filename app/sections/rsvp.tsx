@@ -41,6 +41,7 @@ export function RSVPSection() {
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false); // thêm state loading
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -68,27 +69,36 @@ export function RSVPSection() {
       return;
     }
 
-    const res = await fetch("/api/rsvp", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...formData,
-        guestOf: formData.guestOf === "groom" ? "Chú rể" : "Cô dâu",
-      }),
-    });
+    setIsSubmitting(true); // bắt đầu loading
 
-    const result = await res.json();
-
-    if (result.success) {
-      alert("Gửi phản hồi thành công 💌");
-      setFormData({
-        name: "",
-        phone: "",
-        guestOf: "",
-        numberOfPeople: "1",
+    try {
+      const res = await fetch("/api/rsvp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          guestOf: formData.guestOf === "groom" ? "Chú rể" : "Cô dâu",
+        }),
       });
-    } else {
-      alert("Gửi thất bại, vui lòng thử lại!");
+
+      const result = await res.json();
+
+      if (result.success) {
+        alert("Gửi phản hồi thành công 💌");
+        setFormData({
+          name: "",
+          phone: "",
+          guestOf: "",
+          numberOfPeople: "1",
+        });
+      } else {
+        alert("Gửi thất bại, vui lòng thử lại!");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Có lỗi xảy ra, vui lòng thử lại!");
+    } finally {
+      setIsSubmitting(false); // kết thúc loading
     }
   };
 
@@ -97,7 +107,7 @@ export function RSVPSection() {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 xl:flex-row xl:items-stretch">
           <ScrollReveal className="w-full xl:w-1/2">
-            <div className=" h-full items-center bg-white/90 p-8 shadow-xl ring-1 ring-rose-100 backdrop-blur">
+            <div className="h-full items-center bg-white/90 p-8 shadow-xl ring-1 ring-rose-100 backdrop-blur">
               <div className="flex flex-col relative items-center text-center gap-4 w-full">
                 <Image
                   src={contact.icon}
@@ -205,9 +215,14 @@ export function RSVPSection() {
 
                   <button
                     type="submit"
-                    className="bg-[#ef4444] cursor-pointer h-10 flex items-center justify-center text-white rounded-lg px-4 text-lg"
+                    className={`h-10 flex items-center justify-center text-white rounded-lg px-4 text-lg ${
+                      isSubmitting
+                        ? "bg-gray-400 cursor-not-allowed"
+                        : "bg-[#ef4444] cursor-pointer"
+                    }`}
+                    disabled={isSubmitting}
                   >
-                    Phản hồi
+                    {isSubmitting ? "Đang gửi..." : "Phản hồi"}
                   </button>
                 </div>
               </form>
