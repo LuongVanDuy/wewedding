@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Hân hạnh mời bạn tham dự lễ cưới của Lương Đức & Phương Nhung · Save the date 30.11",
     images: [
       {
-        url: "/assets/images/anhcuoi.png",
+        url: "https://ducnhungwedding.site/assets/images/anhcuoi.png",
         width: 1200,
         height: 630,
         alt: "Lương Đức & Phương Nhung - Wedding Invitation",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Lễ thành hôn - Lương Đức ♥ Phương Nhung",
     description:
       "Chúng tôi trân trọng mời bạn đến dự lễ cưới của chúng tôi vào ngày 30.11. Hãy lưu ngày này cùng chúng tôi!",
-    images: ["/assets/images/anhcuoi.png"],
+    images: ["https://ducnhungwedding.site/assets/images/anhcuoi.png"],
   },
 };
 

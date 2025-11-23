@@ -59,15 +59,37 @@ export function RSVPSection() {
     return newErrors;
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
-    console.log("Form submitted:", formData);
-    alert("Form submitted! Check console.");
+
+    const res = await fetch("/api/rsvp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...formData,
+        guestOf: formData.guestOf === "groom" ? "Chú rể" : "Cô dâu",
+      }),
+    });
+
+    const result = await res.json();
+
+    if (result.success) {
+      alert("Gửi phản hồi thành công 💌");
+      setFormData({
+        name: "",
+        phone: "",
+        guestOf: "",
+        numberOfPeople: "1",
+      });
+    } else {
+      alert("Gửi thất bại, vui lòng thử lại!");
+    }
   };
 
   return (
