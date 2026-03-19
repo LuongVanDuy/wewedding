@@ -23,29 +23,31 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Lễ thành hôn - Lương Đức ♥ Phương Nhung",
+  title: "Lễ thành hôn - Quang Huy ♥ Phương Loan",
   description:
-    "Chúng tôi trân trọng mời bạn đến dự lễ thành hôn của Lương Đức & Phương Nhung vào ngày 30.11. Hãy lưu ngày này cùng chúng tôi!",
+    "Chúng tôi trân trọng mời bạn đến dự lễ thành hôn của Quang Huy & Phương Loan vào ngày 30.03.2026. Hãy lưu ngày này cùng chúng tôi!",
   openGraph: {
-    title: "Lương Đức ♥ Phương Nhung - Hôn lễ của chúng tôi",
+    title: "Quang Huy ♥ Phương Loan - Hôn lễ của chúng tôi",
     description:
-      "Hân hạnh mời bạn tham dự lễ cưới của Lương Đức & Phương Nhung · Save the date 30.11",
+      "Hân hạnh mời bạn tham dự lễ cưới của Quang Huy & Phương Loan · Save the date 30.03.2026",
     images: [
       {
-        url: "https://ducnhungwedding.site/assets/images/anhcuoi.png",
+        url: "https://firebasestorage.googleapis.com/v0/b/test-94a28.firebasestorage.app/o/img1.png?alt=media&token=f1944d21-63e0-4dba-8b98-306d71b19a0e",
         width: 1200,
         height: 630,
-        alt: "Lương Đức & Phương Nhung - Wedding Invitation",
+        alt: "Quang Huy & Phương Loan - Wedding Invitation",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lễ thành hôn - Lương Đức ♥ Phương Nhung",
+    title: "Lễ thành hôn - Quang Huy ♥ Phương Loan",
     description:
-      "Chúng tôi trân trọng mời bạn đến dự lễ cưới của chúng tôi vào ngày 30.11. Hãy lưu ngày này cùng chúng tôi!",
-    images: ["https://ducnhungwedding.site/assets/images/anhcuoi.png"],
+      "Chúng tôi trân trọng mời bạn đến dự lễ cưới của chúng tôi vào ngày 30.03.2026. Hãy lưu ngày này cùng chúng tôi!",
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/test-94a28.firebasestorage.app/o/img1.png?alt=media&token=f1944d21-63e0-4dba-8b98-306d71b19a0e",
+    ],
   },
 };
 
