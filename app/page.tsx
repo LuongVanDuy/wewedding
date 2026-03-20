@@ -21,11 +21,7 @@ export default function Home() {
       <GallerySection />
       <RSVPSection />
       <WishesSection />
-      <MusicPlayer
-        title={siteContent.music.title}
-        artist={siteContent.music.artist}
-        src={siteContent.music.audioSrc}
-      />
+      <MusicPlayer src={siteContent.music.audioSrc} />
       <footer className="px-4 pb-6 pt-4">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
           <Image
