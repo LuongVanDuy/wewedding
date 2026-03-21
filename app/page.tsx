@@ -47,9 +47,9 @@ export default function Home() {
             © 2026 Wedding Moments. All rights reserved by{" "}
             <Link
               href="https://duyanhweb.com.vn/"
-              className="text-blue-500 font-semibold hover:text-blue-700 underline transition"
+              className="text-blue-500 font-semibold hover:text-blue-700 transition"
             >
-              DUYANHWEB.
+              DUY ANH WEB
             </Link>
           </p>
         </div>
