@@ -9,6 +9,7 @@ import { GallerySection } from "./sections/gallery";
 import { RSVPSection } from "./sections/rsvp";
 import { WishesSection } from "./sections/wishes";
 import { MusicPlayer } from "./components/music-player";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -43,7 +44,13 @@ export default function Home() {
           </div>
 
           <p className="text-gray-500 text-sm">
-            © 2025 Wedding Moments. All rights reserved by DuyLV.
+            © 2026 Wedding Moments. All rights reserved by{" "}
+            <Link
+              href="https://duyanhweb.com.vn/"
+              className="text-blue-500 font-semibold hover:text-blue-700 underline transition"
+            >
+              DUYANHWEB.
+            </Link>
           </p>
         </div>
       </footer>
